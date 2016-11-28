@@ -15,11 +15,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
+    @IBOutlet weak var background: UIImageView!
+    
+    @IBOutlet weak var titleImage: UIImageView!
+ 
+    @IBOutlet weak var welcomeBtn: UIButton!
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func welcomePressed(_ sender: AnyObject) {
+    
+        titleImage.isHidden = false
+        background.isHidden = false
+        welcomeBtn.isHidden = true
+    }
 
 }
 
