@@ -2,7 +2,6 @@
 
 Left off
 
-https://www.udemy.com/devslopes-ios10/learn/v4/t/lecture/5396480?start=15
+https://www.udemy.com/devslopes-ios10/learn/v4/t/lecture/5396532
 
-8:41
 
