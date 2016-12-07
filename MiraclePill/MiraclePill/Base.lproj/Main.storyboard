@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="G4f-RM-7Mg">
@@ -105,6 +105,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZy-Ft-XjV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Lfo-2t-rn1"/>
+                                    <constraint firstAttribute="width" constant="184" id="oNh-sN-SSL"/>
+                                </constraints>
+                                <state key="normal" title="Choose Your State"/>
+                                <connections>
+                                    <action selector="stateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W01-mI-jQX"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8T-sb-Mpt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Nul-9e-KcR"/>
+                                    <constraint firstAttribute="width" constant="267" id="U0o-P4-M4L"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -120,14 +136,18 @@
                             <constraint firstItem="0jx-mB-Ydf" firstAttribute="trailing" secondItem="GLr-8q-nih" secondAttribute="trailing" id="C5T-6R-L82"/>
                             <constraint firstItem="uqu-CX-ygO" firstAttribute="trailing" secondItem="BtY-VH-Ouu" secondAttribute="trailing" id="FO6-Bb-Aeq"/>
                             <constraint firstItem="bi5-Bk-Eut" firstAttribute="centerX" secondItem="zzY-v6-Wjh" secondAttribute="centerX" id="GGq-Mq-iSg"/>
+                            <constraint firstItem="HZy-Ft-XjV" firstAttribute="top" secondItem="0jx-mB-Ydf" secondAttribute="bottom" constant="8" id="HUL-VC-S9h"/>
                             <constraint firstItem="0ka-u7-ZEg" firstAttribute="leading" secondItem="FSb-SF-B5l" secondAttribute="leading" id="JJs-Jk-AGT"/>
+                            <constraint firstItem="K8T-sb-Mpt" firstAttribute="top" secondItem="HZy-Ft-XjV" secondAttribute="bottom" constant="8" id="LsP-PH-CK5"/>
                             <constraint firstItem="uqu-CX-ygO" firstAttribute="leading" secondItem="BtY-VH-Ouu" secondAttribute="leading" id="N7r-F2-v9y"/>
+                            <constraint firstItem="HZy-Ft-XjV" firstAttribute="leading" secondItem="0jx-mB-Ydf" secondAttribute="leading" id="PMr-Wm-IlE"/>
                             <constraint firstItem="BtY-VH-Ouu" firstAttribute="top" secondItem="itm-CR-6zv" secondAttribute="bottom" constant="8" id="PXp-TY-i85"/>
                             <constraint firstItem="0ka-u7-ZEg" firstAttribute="trailing" secondItem="FSb-SF-B5l" secondAttribute="trailing" id="QTh-YA-0xs"/>
                             <constraint firstItem="FSb-SF-B5l" firstAttribute="top" secondItem="uqu-CX-ygO" secondAttribute="bottom" constant="8" id="RdR-X0-K8H"/>
                             <constraint firstItem="BtY-VH-Ouu" firstAttribute="trailing" secondItem="itm-CR-6zv" secondAttribute="trailing" id="SIO-Ou-xXD"/>
                             <constraint firstItem="bi5-Bk-Eut" firstAttribute="top" secondItem="G4f-RM-7Mg" secondAttribute="bottom" constant="67" id="SeP-ei-HXN"/>
                             <constraint firstItem="zzY-v6-Wjh" firstAttribute="centerX" secondItem="G4f-RM-7Mg" secondAttribute="centerX" id="TcN-1S-6UO"/>
+                            <constraint firstItem="K8T-sb-Mpt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xdg-73-OA8"/>
                             <constraint firstItem="GLr-8q-nih" firstAttribute="trailing" secondItem="0ka-u7-ZEg" secondAttribute="trailing" id="ZKp-0l-qGc"/>
                             <constraint firstItem="G4f-RM-7Mg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="deR-bs-uBT"/>
                             <constraint firstItem="itm-CR-6zv" firstAttribute="trailing" secondItem="pbT-cL-g2h" secondAttribute="trailing" id="ed6-1k-CPz"/>
@@ -142,6 +162,10 @@
                             <constraint firstItem="0jx-mB-Ydf" firstAttribute="top" secondItem="GLr-8q-nih" secondAttribute="bottom" constant="8" id="vJk-dd-jKs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statePicker" destination="K8T-sb-Mpt" id="okN-dd-qpN"/>
+                        <outlet property="statePickerBtn" destination="HZy-Ft-XjV" id="iOK-t8-FXt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
