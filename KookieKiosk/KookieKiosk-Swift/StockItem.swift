@@ -43,6 +43,10 @@ class StockItem: SKNode {
   private var sellButton = SKSpriteNode(imageNamed: "sell_button")
   private var priceTag = SKSpriteNode(imageNamed: "price_tag")
   
+  var state: State
+  private var lastStateSwitchTime: CFAbsoluteTime
+  
+  
   init(stockItemData: [String: AnyObject], stockItemConfiguration: [String: NSNumber], gameDelegate: GameDelegate) {
     self.gameDelegate = gameDelegate
     
@@ -81,6 +85,11 @@ class StockItem: SKNode {
       progressBar = ContinuousProgressBar(emptyImageName: emptyImageName as String, fullImageName: fullImageName as String)
     }
     
+    let stateAsObject: AnyObject? = stockItemData["state"]
+    let stateAsInt = stateAsObject as! Int
+    state = State(rawValue: stateAsInt)!
+    
+    lastStateSwitchTime = stockItemData["lastStateSwitchTime"] as AnyObject? as! CFAbsoluteTime
     super.init()
     setupPriceLabel()
     setupStockingTimer(relativeX: relativeTimerPositionX!, relativeY: relativeTimerPositionY!)
@@ -92,6 +101,7 @@ class StockItem: SKNode {
     addChild(priceTag)
     addChild(stockingTimer)
     addChild(sellButton)
+    switchTo(state: state)
   }
   
   required init(coder aDecoder: NSCoder) {
@@ -127,7 +137,57 @@ class StockItem: SKNode {
     data["amount"] = amount
     data["x"] = relativeX
     data["y"] = relativeY
+    data["state"] = state.rawValue
+    data["lastStateSwitchTime"] = lastStateSwitchTime
     return data
+  }
+  
+  func switchTo(state: State) {
+    if self.state != state {
+      lastStateSwitchTime = CFAbsoluteTimeGetCurrent()
+    }
+    self.state = state
+    switch state {
+    case .empty:
+      stockingTimer.isHidden = true
+      sellButton.isHidden = true
+      priceTag.isHidden = false
+    case .stocking:
+      stockingTimer.isHidden = false
+      sellButton.isHidden = true
+      priceTag.isHidden = true
+    case .stocked:
+      stockingTimer.isHidden = true
+      sellButton.isHidden = false
+      priceTag.isHidden = true
+    case .selling:
+      stockingTimer.isHidden = true
+      sellButton.isHidden = true
+      priceTag.isHidden = true
+    }
+  }
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    switch state {
+    case .empty:
+      let bought = gameDelegate.updateMoney(by: -stockingPrice * maxAmount)
+      if bought {
+        switchTo(state: .stocking)
+      } else {
+        let playSound = SKAction.playSoundFileNamed("hit.wav", waitForCompletion: true)
+        run(playSound)
+        
+        let rotateLeft = SKAction.rotate(byAngle: 0.2, duration: 0.1)
+        let rotateRight = rotateLeft.reversed()
+        let shakeAction = SKAction.sequence([rotateLeft, rotateRight])
+        let repeatAction = SKAction.repeat(shakeAction, count: 3)
+        priceTag.run(repeatAction)
+      }
+    case .stocked:
+      switchTo(state: .selling)
+    default:
+      break
+    }
   }
   
 }

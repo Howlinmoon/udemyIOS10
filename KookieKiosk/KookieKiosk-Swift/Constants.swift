@@ -30,3 +30,10 @@ enum ZPosition: Int {
 }
 
 let TimeScale: Float = 1
+
+enum State: Int {
+  case empty
+  case stocking
+  case stocked
+  case selling
+}
