@@ -8,6 +8,7 @@ KookieKiosk
 Left off here:
 "You can use the absolute time of the last state-switch to show some progress indicators to your player. Start by updating the countdown that shows the player how long they need to wait for a purchased item to complete stocking."
 
+Stackview - left off at 17:00
 
 
 
