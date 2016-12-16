@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,11 +18,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHe-4S-fdY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="nd9-75-UsY"/>
+                                    <constraint firstAttribute="height" constant="30" id="oEF-5c-ReU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-eT-Kpk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hsP-Yv-p8Y"/>
+                                    <constraint firstAttribute="width" constant="198" id="mNd-3l-l1J"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgY-4b-be0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="FIm-gu-H4u"/>
+                                    <constraint firstAttribute="width" constant="159" id="YX8-AN-Z5U"/>
+                                </constraints>
+                                <state key="normal" title="Login Now!"/>
+                                <connections>
+                                    <segue destination="M51-KY-t5i" kind="show" id="FnB-B2-PPr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xkZ-eT-Kpk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Pa-Ag-3MA"/>
+                            <constraint firstItem="nHe-4S-fdY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="9ZA-I7-DB9"/>
+                            <constraint firstItem="XgY-4b-be0" firstAttribute="top" secondItem="xkZ-eT-Kpk" secondAttribute="bottom" constant="31" id="FXu-DV-gsp"/>
+                            <constraint firstItem="XgY-4b-be0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TwK-fB-fXO"/>
+                            <constraint firstItem="nHe-4S-fdY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W8O-Ns-sbJ"/>
+                            <constraint firstItem="xkZ-eT-Kpk" firstAttribute="top" secondItem="nHe-4S-fdY" secondAttribute="bottom" constant="33" id="yZZ-sV-osV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-39" y="27"/>
         </scene>
         <!--Music ListVC-->
         <scene sceneID="aIC-7m-CkM">
@@ -35,39 +75,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHe-4S-fdY">
-                                <frame key="frameInset" minX="81" minY="57" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-eT-Kpk">
-                                <frame key="frameInset" minX="81" minY="101" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-ah-X9l">
-                                <frame key="frameInset" minX="81" minY="150" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgY-4b-be0">
-                                <frame key="frameInset" minX="101" minY="207" width="159" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM8-3s-LsA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="139-N7-gGd"/>
+                                    <constraint firstAttribute="width" constant="65" id="qVv-R5-Rmv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="M51-KY-t5i" eventType="touchUpInside" id="AJX-4g-tus"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrS-5g-g9e">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="3Ka-D1-adF"/>
+                                    <constraint firstAttribute="width" constant="176" id="Qnk-rm-80D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Load 3rd Screen"/>
+                                <connections>
+                                    <action selector="load3rdScreen:" destination="M51-KY-t5i" eventType="touchUpInside" id="wUp-Lq-wvD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rM8-3s-LsA" firstAttribute="top" secondItem="nWa-Jz-dsG" secondAttribute="bottom" id="UFY-4y-a6K"/>
+                            <constraint firstItem="rM8-3s-LsA" firstAttribute="leading" secondItem="FQa-bA-llN" secondAttribute="leadingMargin" id="qPK-n2-eQj"/>
+                            <constraint firstItem="ZrS-5g-g9e" firstAttribute="centerX" secondItem="FQa-bA-llN" secondAttribute="centerX" id="qSG-gY-XvT"/>
+                            <constraint firstItem="ZrS-5g-g9e" firstAttribute="centerY" secondItem="FQa-bA-llN" secondAttribute="centerY" id="rTZ-Kk-Mcc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="slr-tA-dG4" kind="showDetail" identifier="songVC" id="AG0-3V-UFk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmY-aO-QqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693.60000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="752.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--Play SongVC-->
+        <scene sceneID="qlg-Wn-v3X">
+            <objects>
+                <viewController id="slr-tA-dG4" customClass="PlaySongVC" customModule="SwappingScreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8WZ-0t-Cm5"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTt-Mv-poY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KmY-nk-gzX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBn-TL-2L7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="2xs-Vv-20D"/>
+                                    <constraint firstAttribute="height" constant="40" id="arN-jV-b6P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yBn-TL-2L7" firstAttribute="centerX" secondItem="KmY-nk-gzX" secondAttribute="centerX" id="2Xc-q0-69z"/>
+                            <constraint firstItem="yBn-TL-2L7" firstAttribute="top" secondItem="8WZ-0t-Cm5" secondAttribute="bottom" constant="35" id="zkQ-v0-2XP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="songTitleLbl" destination="yBn-TL-2L7" id="kbC-fe-ghF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9i-nA-Tm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565.5999999999999" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@
 		96348D3D1E030ECA000973E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96348D3C1E030ECA000973E9 /* Assets.xcassets */; };
 		96348D401E030ECA000973E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96348D3E1E030ECA000973E9 /* LaunchScreen.storyboard */; };
 		96348D481E031023000973E9 /* MusicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96348D471E031023000973E9 /* MusicListVC.swift */; };
+		963580281E045AE400768FEB /* PlaySongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963580271E045AE400768FEB /* PlaySongVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		96348D3F1E030ECA000973E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96348D411E030ECA000973E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96348D471E031023000973E9 /* MusicListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListVC.swift; sourceTree = "<group>"; };
+		963580271E045AE400768FEB /* PlaySongVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySongVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				96348D351E030ECA000973E9 /* AppDelegate.swift */,
 				96348D371E030ECA000973E9 /* LoginVC.swift */,
+				96348D471E031023000973E9 /* MusicListVC.swift */,
+				963580271E045AE400768FEB /* PlaySongVC.swift */,
 				96348D391E030ECA000973E9 /* Main.storyboard */,
 				96348D3C1E030ECA000973E9 /* Assets.xcassets */,
 				96348D3E1E030ECA000973E9 /* LaunchScreen.storyboard */,
 				96348D411E030ECA000973E9 /* Info.plist */,
-				96348D471E031023000973E9 /* MusicListVC.swift */,
 			);
 			path = SwappingScreens;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96348D481E031023000973E9 /* MusicListVC.swift in Sources */,
+				963580281E045AE400768FEB /* PlaySongVC.swift in Sources */,
 				96348D381E030ECA000973E9 /* LoginVC.swift in Sources */,
 				96348D361E030ECA000973E9 /* AppDelegate.swift in Sources */,
 			);
@@ -303,6 +307,7 @@
 				96348D461E030ECA000973E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
