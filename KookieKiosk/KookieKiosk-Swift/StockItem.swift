@@ -190,4 +190,27 @@ class StockItem: SKNode {
     }
   }
   
+  func updateStockingTimerText() {
+    let stockingTimeTotal = CFTimeInterval(Float(maxAmount) * stockingSpeed)
+    let currentTime = CFAbsoluteTimeGetCurrent()
+    let timePassed = currentTime - lastStateSwitchTime
+    let stockingTimeLeft = stockingTimeTotal - timePassed
+    stockingTimer.text = String(format: "%.0f", stockingTimeLeft)
+  }
+  
+  func update() {
+    let currentTimeAbsolute = CFAbsoluteTimeGetCurrent()
+    let timePassed = currentTimeAbsolute - lastStateSwitchTime
+    switch state {
+    case .stocking:
+      updateStockingTimerText()
+      amount = min(Int(Float(timePassed) / stockingSpeed), maxAmount)
+      if amount == maxAmount {
+        switchTo(state: .stocked)
+      }
+    default:
+      break
+    }
+  }
+  
 }

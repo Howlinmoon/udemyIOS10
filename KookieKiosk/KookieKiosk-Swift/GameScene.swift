@@ -145,4 +145,10 @@ extension GameScene: GameDelegate {
     return true
   }
   
+  override func update(_ currentTime: TimeInterval) {
+    for stockItem in stockItems {
+      stockItem.update()
+    }
+  }
+  
 }
