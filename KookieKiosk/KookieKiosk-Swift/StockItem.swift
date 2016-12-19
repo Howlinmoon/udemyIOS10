@@ -75,14 +75,17 @@ class StockItem: SKNode {
     flavor = stockItemData["flavor"] as AnyObject? as! String
     
     // Create progress bar
+    print("#*# DEBUG #*# type: \(type)")
     if type == "cookie" {
       let baseName = String(format: "item_%@", type) + "_tray_%i"
+      print("#*# DEBUG #*# baseName: \(baseName)")
       progressBar = DiscreteProgressBar(baseName: baseName)
       
     } else {
       let emptyImageName = NSString(format: "item_%@_empty", type)
       let fullImageName = NSString(format: "item_%@_%@", type, flavor)
       progressBar = ContinuousProgressBar(emptyImageName: emptyImageName as String, fullImageName: fullImageName as String)
+      print("#*# DEBUG #*# emptyImageName: \(emptyImageName), fullImageName: \(fullImageName)")
     }
     
     let stateAsObject: AnyObject? = stockItemData["state"]

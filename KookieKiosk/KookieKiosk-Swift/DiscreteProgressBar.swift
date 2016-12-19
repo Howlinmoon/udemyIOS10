@@ -33,8 +33,10 @@ class DiscreteProgressBar: ProgressBar {
     var spritesTemp = [SKTexture]()
     var count = 0
     var fileExists: Bool
+    print("#*# DEBUG DiscreteProgressBar passed: \(baseName)")
     repeat {
       let fileName = String(format: baseName, count)
+      print("#*# DEBUG DiscreteProgressBar fileName: \(fileName)")
       let image : UIImage? = UIImage(named: fileName)
       if image == nil {
         fileExists = false
@@ -42,6 +44,7 @@ class DiscreteProgressBar: ProgressBar {
         spritesTemp.append(SKTexture(image: image!))
         fileExists = true
       }
+      print("#*# DEBUG DiscreteProgressBar fileExists: \(fileExists)")
       count += 1
     } while fileExists
     sprites = spritesTemp
