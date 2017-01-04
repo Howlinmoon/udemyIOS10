@@ -45,5 +45,14 @@
 	<array>
 		<string>still time.ttf</string>
 	</array>
+	<key>app transport security setttings</key>
+	<string></string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
