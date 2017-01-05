@@ -146,14 +146,29 @@
                                     <constraint firstAttribute="height" constant="223" id="D2U-YB-eLM"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yo2-XD-Gsq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="IZi-Ti-Huu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yo2-XD-Gsq" firstAttribute="top" secondItem="1cd-ly-KM5" secondAttribute="bottom" constant="50" id="0VN-8k-4PM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yo2-XD-Gsq" secondAttribute="trailing" constant="5" id="JwI-he-9YE"/>
                             <constraint firstItem="1cd-ly-KM5" firstAttribute="leading" secondItem="lMy-OM-L2k" secondAttribute="leading" id="NHc-BE-OmX"/>
                             <constraint firstItem="1cd-ly-KM5" firstAttribute="top" secondItem="lMy-OM-L2k" secondAttribute="top" id="QlQ-bf-bEw"/>
                             <constraint firstAttribute="trailing" secondItem="1cd-ly-KM5" secondAttribute="trailing" id="gz5-gr-t7b"/>
+                            <constraint firstItem="yo2-XD-Gsq" firstAttribute="leading" secondItem="lMy-OM-L2k" secondAttribute="leadingMargin" constant="5" id="hT3-vo-mx5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="yo2-XD-Gsq" id="xP6-bQ-RVO"/>
+                        <outlet property="webView" destination="1cd-ly-KM5" id="59Y-oX-nyZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgD-6I-z64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
