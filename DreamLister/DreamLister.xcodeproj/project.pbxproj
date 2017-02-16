@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9670EDF01E561CD70014821F /* Tesla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9670EDEF1E561CD70014821F /* Tesla.jpg */; };
+		9670EDF31E561D850014821F /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670EDF21E561D850014821F /* MaterialView.swift */; };
 		96753CE51E43A2EC0031FAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753CE41E43A2EC0031FAAD /* AppDelegate.swift */; };
 		96753CE71E43A2EC0031FAAD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753CE61E43A2EC0031FAAD /* MainVC.swift */; };
 		96753CEA1E43A2EC0031FAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96753CE81E43A2EC0031FAAD /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9670EDEF1E561CD70014821F /* Tesla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tesla.jpg; sourceTree = "<group>"; };
+		9670EDF21E561D850014821F /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		96753CE11E43A2EC0031FAAD /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96753CE41E43A2EC0031FAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96753CE61E43A2EC0031FAAD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9670EDF11E561D5A0014821F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9670EDF21E561D850014821F /* MaterialView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		96753CD81E43A2EB0031FAAD = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +84,13 @@
 		96753CE31E43A2EC0031FAAD /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				9670EDF11E561D5A0014821F /* Views */,
 				96753D1B1E43ABD90031FAAD /* Model */,
 				96753CE41E43A2EC0031FAAD /* AppDelegate.swift */,
 				96753CE61E43A2EC0031FAAD /* MainVC.swift */,
 				96753CE81E43A2EC0031FAAD /* Main.storyboard */,
 				96753CEE1E43A2EC0031FAAD /* Assets.xcassets */,
+				9670EDEF1E561CD70014821F /* Tesla.jpg */,
 				96753CF01E43A2EC0031FAAD /* LaunchScreen.storyboard */,
 				96753CF31E43A2EC0031FAAD /* Info.plist */,
 				96753CEB1E43A2EC0031FAAD /* DreamLister.xcdatamodeld */,
@@ -168,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96753CF21E43A2EC0031FAAD /* LaunchScreen.storyboard in Resources */,
+				9670EDF01E561CD70014821F /* Tesla.jpg in Resources */,
 				96753CEF1E43A2EC0031FAAD /* Assets.xcassets in Resources */,
 				96753CEA1E43A2EC0031FAAD /* Main.storyboard in Resources */,
 			);
@@ -183,6 +198,7 @@
 				96753CE71E43A2EC0031FAAD /* MainVC.swift in Sources */,
 				96753D151E43AB5A0031FAAD /* Store+CoreDataClass.swift in Sources */,
 				96753D181E43AB5A0031FAAD /* ItemType+CoreDataProperties.swift in Sources */,
+				9670EDF31E561D850014821F /* MaterialView.swift in Sources */,
 				96753CE51E43A2EC0031FAAD /* AppDelegate.swift in Sources */,
 				96753D131E43AB5A0031FAAD /* Item+CoreDataClass.swift in Sources */,
 				96753D171E43AB5A0031FAAD /* ItemType+CoreDataClass.swift in Sources */,
