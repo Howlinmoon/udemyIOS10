@@ -23,6 +23,7 @@
 		96753D181E43AB5A0031FAAD /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753D101E43AB5A0031FAAD /* ItemType+CoreDataProperties.swift */; };
 		96753D191E43AB5A0031FAAD /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753D111E43AB5A0031FAAD /* Image+CoreDataClass.swift */; };
 		96753D1A1E43AB5A0031FAAD /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96753D121E43AB5A0031FAAD /* Image+CoreDataProperties.swift */; };
+		969A2CC21E576A4E00722913 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A2CC11E576A4E00722913 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		96753D101E43AB5A0031FAAD /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		96753D111E43AB5A0031FAAD /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		96753D121E43AB5A0031FAAD /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		969A2CC11E576A4E00722913 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		9670EDF11E561D5A0014821F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				969A2CC11E576A4E00722913 /* ItemCell.swift */,
 				9670EDF21E561D850014821F /* MaterialView.swift */,
 			);
 			name = Views;
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969A2CC21E576A4E00722913 /* ItemCell.swift in Sources */,
 				96753CE71E43A2EC0031FAAD /* MainVC.swift in Sources */,
 				96753D151E43AB5A0031FAAD /* Store+CoreDataClass.swift in Sources */,
 				96753D181E43AB5A0031FAAD /* ItemType+CoreDataProperties.swift in Sources */,
