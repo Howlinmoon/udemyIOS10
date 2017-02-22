@@ -1,8 +1,7 @@
 # udemyIOS10
 
 
-Did not find this segment very interesting, so decided to skip it.
-Sorry.
+Left off:  https://www.udemy.com/devslopes-ios10/learn/v4/t/lecture/5396952
 
 
 
